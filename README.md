@@ -4,10 +4,10 @@
 
 ## Состав команды
 
-1. Хоряк Лев Сергеевич ([@LevKhoriak](https://github.com/LevKhoriak))
+1. Артамонова Анжелика Петровна ([@enjirtmnv](https://github.com/enjirtmnv))
 2. Кущенко Валерия Павловна ([@lerrond](https://github.com/lerrond))
-3. Артамонова Анжелика Петровна ([@enjirtmnv](https://github.com/enjirtmnv))
-4. Пристайко Алексей Олегович ([@qwertd105](https://github.com/qwertd105))
+3. Пристайко Алексей Олегович ([@qwertd105](https://github.com/qwertd105))
+4. Хоряк Лев Сергеевич ([@LevKhoriak](https://github.com/LevKhoriak))
 
 ## Куратор
 
