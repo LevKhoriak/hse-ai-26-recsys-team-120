@@ -1,7 +1,7 @@
 [project]
 name = "recsys"
 version = "0.1.0"
-description = "Add your description here"
+description = "Multimodal Recommender System built during HSE AI Msc 2026"
 readme = "README.md"
 authors = [
     { name = "Lev Khoriak", email = "lev.horyak@gmail.com" }
