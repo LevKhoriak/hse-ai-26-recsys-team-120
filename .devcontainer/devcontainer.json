@@ -1,0 +1,11 @@
+{
+  "name": "hse-project-tooling",
+  "build": {"dockerfile": "../Dockerfile", "context": ".."},
+  "postCreateCommand": "uv sync --dev --locked",
+  "customizations": {
+    "vscode": {
+      "extensions": ["charliermarsh.ruff", "ms-python.mypy-type-checker"],
+      "settings": {"python.defaultInterpreterPath": "/opt/venv/bin/python"}
+    }
+  }
+}
