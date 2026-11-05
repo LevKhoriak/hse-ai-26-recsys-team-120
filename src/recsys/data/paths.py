@@ -25,6 +25,6 @@ def hf_source(kind: Kind, category: str) -> str:
 
 
 def dataset_uri(kind: Kind, category: str) -> str:
-    """s3:// folder of the processed dataset, e.g. .../processed/reviews/amazon_fashion"""
+    """s3:// folder of the dataset, e.g. .../processed/reviews/amazon_fashion"""
     bucket = get_settings().s3_bucket_name
     return f"s3://{bucket}/data/processed/{kind}/{category.lower()}"

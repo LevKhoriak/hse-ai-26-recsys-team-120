@@ -88,7 +88,10 @@ reviews = (
     pl.scan_parquet(
         f"{dataset_uri('reviews', 'Grocery_and_Gourmet_Food')}/**/*.parquet",
         hive_partitioning=True,
-        storage_options={"aws_endpoint_url": s.aws_endpoint_url, "aws_region": s.aws_region},
+        storage_options={
+            "aws_endpoint_url": s.aws_endpoint_url,
+            "aws_region": s.aws_region,
+        },
     )
     .filter(pl.col("year") >= 2020)
     .select("user_id", "parent_asin", "rating", "timestamp")
@@ -169,7 +172,8 @@ JSON-поля разбираются так:
 import json
 
 images = json.loads(meta.loc[0, "images"])  # список словарей с URL картинок
-details = json.loads(meta.loc[0, "details"])  # словарь характеристик, ключи у товаров разные
+# словарь характеристик, ключи у товаров разные
+details = json.loads(meta.loc[0, "details"])
 ```
 
 ## Соглашения

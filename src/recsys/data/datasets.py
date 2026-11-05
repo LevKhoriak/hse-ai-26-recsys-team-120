@@ -25,21 +25,20 @@ class DatasetSpec:
 
 # --- reviews -----------------------------------------------------------------
 
-REVIEWS_SCHEMA = pa.schema(
-    [
-        ("user_id", pa.string()),
-        ("parent_asin", pa.string()),
-        ("asin", pa.string()),
-        ("rating", pa.int8()),
-        ("title", pa.string()),
-        ("text", pa.string()),
-        ("timestamp", pa.timestamp("ms")),
-        ("helpful_vote", pa.int32()),
-        ("verified_purchase", pa.bool_()),
-        ("n_images", pa.int16()),
-        ("year", pa.int16()),  # partition column: stored in the path, not the file
-    ]
-)
+_REVIEWS_COLUMNS: list[tuple[str, pa.DataType]] = [
+    ("user_id", pa.string()),
+    ("parent_asin", pa.string()),
+    ("asin", pa.string()),
+    ("rating", pa.int8()),
+    ("title", pa.string()),
+    ("text", pa.string()),
+    ("timestamp", pa.timestamp("ms")),
+    ("helpful_vote", pa.int32()),
+    ("verified_purchase", pa.bool_()),
+    ("n_images", pa.int16()),
+    ("year", pa.int16()),  # partition column: stored in the path, not the file
+]
+REVIEWS_SCHEMA = pa.schema(_REVIEWS_COLUMNS)
 
 
 def transform_reviews(df: pd.DataFrame) -> pd.DataFrame:
@@ -56,26 +55,25 @@ def transform_reviews(df: pd.DataFrame) -> pd.DataFrame:
 
 # --- item metadata -------------------------------------------------------------
 
-META_SCHEMA = pa.schema(
-    [
-        ("parent_asin", pa.string()),
-        ("main_category", pa.string()),
-        ("title", pa.string()),
-        ("store", pa.string()),
-        ("price", pa.float64()),  # raw values include the string "None"
-        ("average_rating", pa.float64()),
-        ("rating_number", pa.int64()),
-        ("features", pa.list_(pa.string())),
-        ("description", pa.list_(pa.string())),
-        ("categories", pa.list_(pa.string())),
-        # nested and irregular (keys differ per item), stored as JSON strings;
-        # parse with json.loads where needed, e.g. in the image pipeline
-        ("images", pa.string()),
-        ("videos", pa.string()),
-        ("details", pa.string()),
-        ("bought_together", pa.string()),
-    ]
-)
+_META_COLUMNS: list[tuple[str, pa.DataType]] = [
+    ("parent_asin", pa.string()),
+    ("main_category", pa.string()),
+    ("title", pa.string()),
+    ("store", pa.string()),
+    ("price", pa.float64()),  # raw values include the string "None"
+    ("average_rating", pa.float64()),
+    ("rating_number", pa.int64()),
+    ("features", pa.list_(pa.string())),
+    ("description", pa.list_(pa.string())),
+    ("categories", pa.list_(pa.string())),
+    # nested and irregular (keys differ per item), stored as JSON strings;
+    # parse with json.loads where needed, e.g. in the image pipeline
+    ("images", pa.string()),
+    ("videos", pa.string()),
+    ("details", pa.string()),
+    ("bought_together", pa.string()),
+]
+META_SCHEMA = pa.schema(_META_COLUMNS)
 _STR_COLS = ["parent_asin", "main_category", "title", "store"]
 _LIST_COLS = ["features", "description", "categories"]
 _JSON_COLS = ["images", "videos", "details", "bought_together"]
@@ -118,5 +116,7 @@ SPECS: dict[Kind, DatasetSpec] = {
     "reviews": DatasetSpec(
         transform=transform_reviews, partition_cols=["year"], schema=REVIEWS_SCHEMA
     ),
-    "meta": DatasetSpec(transform=transform_meta, partition_cols=[], schema=META_SCHEMA),
+    "meta": DatasetSpec(
+        transform=transform_meta, partition_cols=[], schema=META_SCHEMA
+    ),
 }

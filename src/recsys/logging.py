@@ -7,7 +7,7 @@ DATEFMT = "%Y-%m-%d %H:%M:%S"
 
 
 def setup_logging(level: int | str = logging.INFO) -> logging.Logger:
-    """Configure the parent logger once. Safe to call repeatedly (e.g. notebook re-runs)."""
+    """Configure the parent logger once. Safe to call again (e.g. notebook re-runs)."""
     logger = logging.getLogger(PARENT)
     logger.setLevel(level)
     if not logger.handlers:  # avoid duplicate lines on re-run / autoreload

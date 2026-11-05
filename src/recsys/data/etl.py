@@ -58,7 +58,8 @@ def extract(hf_path: str, chunksize: int) -> Iterator[tuple[pd.DataFrame, int]]:
     with (
         open_binary(hf_path) as raw,
         io.TextIOWrapper(raw, encoding="utf-8") as text,
-        pd.read_json(
+        # the stubs omit text streams for chunked DataFrame reads; pandas accepts them
+        pd.read_json(  # type: ignore[call-overload]
             text,
             lines=True,
             chunksize=chunksize,
@@ -187,9 +188,7 @@ def parse_args() -> argparse.Namespace:
         required=True,
         help="as in the HF file names, e.g. Amazon_Fashion, Grocery_and_Gourmet_Food",
     )
-    parser.add_argument(
-        "--chunksize", type=int, default=200_000, help="rows per chunk"
-    )
+    parser.add_argument("--chunksize", type=int, default=200_000, help="rows per chunk")
     parser.add_argument(
         "--overwrite",
         action="store_true",

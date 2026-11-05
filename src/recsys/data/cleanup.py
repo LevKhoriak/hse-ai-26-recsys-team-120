@@ -54,7 +54,11 @@ def main() -> None:
 
     stale = stale_staging_runs(bucket, age)
     for path in stale:
-        log.info("%s stale staging run %s", "would remove" if args.dry_run else "removing", path)
+        log.info(
+            "%s stale staging run %s",
+            "would remove" if args.dry_run else "removing",
+            path,
+        )
         if not args.dry_run:
             s3.rm(path, recursive=True)
 
