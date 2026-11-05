@@ -7,7 +7,22 @@ authors = [
     { name = "Lev Khoriak", email = "lev.horyak@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "boto3>=1.43.106",
+    "fsspec>=2026.9.0",
+    "huggingface-hub>=2.2.0",
+    "ipykernel>=7.4.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+    "pyarrow>=26.0.0",
+    "pydantic-settings>=2.16.0",
+    "python-dotenv>=1.2.4",
+    "s3fs[boto3]>=2025.1",
+    "scipy>=1.18.1",
+    "tqdm>=4.70.1",
+]
 
 [project.optional-dependencies]
 train = [
@@ -22,9 +37,13 @@ build-backend = "uv_build"
 [dependency-groups]
 dev = [
     "mypy>=2.4.0",
+    "pandas-stubs>=3.1.0.261029",
     "pre-commit>=4.7.0",
+    "pyarrow-stubs>=20.0.0.20260819",
     "pytest>=9.1.1",
     "ruff>=0.17.0",
+    "types-boto3[s3]>=1.43.114",
+    "types-tqdm>=4.70.0.20260906",
 ]
 
 [tool.ruff.lint]
@@ -32,3 +51,13 @@ select = ["E", "F", "I", "B", "UP"]
 
 [tool.mypy]
 strict = true
+
+# no stubs exist for these; recsys.data.s3 and etl.py wrap them with explicit types
+[[tool.mypy.overrides]]
+module = ["fsspec.*", "s3fs.*"]
+ignore_missing_imports = true
+
+[tool.pyrefly]
+python-interpreter-path = '.venv/bin/python'
+project-includes = ["src", "tests", "notebooks"]
+search-path = ["src"]
