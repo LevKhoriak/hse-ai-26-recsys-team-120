@@ -15,6 +15,7 @@ if TYPE_CHECKING:  # stubs are a dev dependency, not needed at runtime
     from types_boto3_s3 import S3Client
 
 STAGING = "_staging"  # bucket-level prefix for in-progress runs
+BACKUP = "_backup"  # previous dataset versions while they're being replaced
 SUCCESS = "_SUCCESS"  # marker written when a dataset is complete (Hadoop-style)
 RUN_ID_FORMAT = "%Y%m%dT%H%M%SZ"
 

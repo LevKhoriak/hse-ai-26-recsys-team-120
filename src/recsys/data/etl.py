@@ -22,6 +22,7 @@ from recsys.data import s3
 from recsys.data.datasets import SPECS, DatasetSpec
 from recsys.data.paths import KINDS, Kind, dataset_uri, hf_source
 from recsys.data.s3 import (
+    BACKUP,
     STAGING,
     SUCCESS,
     abort_multipart_uploads,
@@ -94,24 +95,74 @@ def load(df: pd.DataFrame, spec: DatasetSpec, staging: str, part: int) -> None:
 # --- staging and publishing ----------------------------------------------------
 
 
-def staging_path(dest: str) -> str:
-    """Each run writes to its own folder under s3://<bucket>/_staging/ first."""
+def _run_folder(prefix: str, dest: str) -> str:
     bucket, key = split(dest)
     name = key.replace("/", "_")  # e.g. data_processed_reviews_amazon_fashion
-    return f"s3://{bucket}/{STAGING}/{name}-{new_run_id()}"
+    return f"s3://{bucket}/{prefix}/{name}-{new_run_id()}"
+
+
+def staging_path(dest: str) -> str:
+    """Each run writes to its own folder under s3://<bucket>/_staging/ first."""
+    return _run_folder(STAGING, dest)
+
+
+def _copy_tree(src: str, dest: str) -> None:
+    """Copy a folder, with the _SUCCESS marker last so it's only there when complete."""
+    src_root = src.removeprefix("s3://").rstrip("/")
+    dest_root = dest.removeprefix("s3://").rstrip("/")
+    files = sorted(s3.find(src_root), key=lambda path: path.endswith(f"/{SUCCESS}"))
+    for path in files:
+        s3.copy(path, dest_root + path[len(src_root) :])
+
+
+def _back_up(dest: str) -> str:
+    """Copy dest aside. _backup/ is out of cleanup.py's reach, on purpose: after a
+    hard crash mid-publish it may hold the only complete version of the dataset."""
+    backup = _run_folder(BACKUP, dest)
+    try:
+        _copy_tree(dest, backup)
+    except BaseException:
+        if s3.exists(backup):
+            s3.rm(backup, recursive=True)
+        raise
+    return backup
+
+
+def _roll_back(dest: str, backup: str | None) -> None:
+    """Undo a failed publish: drop partial output and restore the old version."""
+    try:
+        if s3.exists(dest):
+            s3.rm(dest, recursive=True)
+        if backup is not None:
+            _copy_tree(backup, dest)
+            s3.rm(backup, recursive=True)
+    except Exception:
+        log.exception("rollback failed: %s is incomplete, see %s", dest, backup)
 
 
 def publish(staging: str, dest: str) -> None:
-    """Replace dest with the finished staging folder, then mark it complete."""
+    """Replace dest with the finished staging folder, then mark it complete.
+
+    S3 can't swap folders atomically, so the old version is backed up first and
+    restored if anything fails. Readers can tell a replacement is in progress
+    because _SUCCESS is missing. On failure staging is kept for cleanup.py.
+    """
+    backup = None
     if s3.exists(dest):
         log.info("replacing existing %s", dest)
-        s3.rm(dest, recursive=True)
-    src_root = staging.removeprefix("s3://")
-    dest_root = dest.removeprefix("s3://").rstrip("/")
-    for src in s3.find(src_root):
-        s3.copy(src, dest_root + src[len(src_root) :])
-    s3.touch(f"{dest_root}/{SUCCESS}")
-    s3.rm(src_root, recursive=True)
+        backup = _back_up(dest)
+    try:
+        if backup is not None:
+            s3.rm(dest, recursive=True)
+        _copy_tree(staging, dest)
+        s3.touch(f"{dest.removeprefix('s3://').rstrip('/')}/{SUCCESS}")
+    except BaseException:  # includes Ctrl+C
+        log.error("publish failed, rolling back %s", dest)
+        _roll_back(dest, backup)
+        raise
+    s3.rm(staging, recursive=True)
+    if backup is not None:
+        s3.rm(backup, recursive=True)
 
 
 def discard(staging: str) -> None:
@@ -179,6 +230,9 @@ def main() -> None:
             staging=None if args.dry_run else staging,
             chunksize=args.chunksize,
         )
+        if total == 0:
+            # most likely a broken source; never replace real data with nothing
+            raise SystemExit(f"{source} has no rows, nothing published to {dest}")
     except BaseException:  # includes Ctrl+C
         if not args.dry_run:
             log.error("run failed, removing partial output")

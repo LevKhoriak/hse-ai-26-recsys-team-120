@@ -1,8 +1,8 @@
 """Per-kind cleanup: how each raw jsonl becomes a parquet dataset.
 
 Every chunk must produce identical column types, otherwise the part files can't
-be read back together. Reviews get there with explicit casts; metadata has
-nested, irregular fields, so it gets a pinned schema.
+be read back together, so each kind gets a pinned schema. Without one, a column
+that is entirely null in a chunk would be written with a null type.
 """
 
 import json
@@ -24,6 +24,22 @@ class DatasetSpec:
 
 
 # --- reviews -----------------------------------------------------------------
+
+REVIEWS_SCHEMA = pa.schema(
+    [
+        ("user_id", pa.string()),
+        ("parent_asin", pa.string()),
+        ("asin", pa.string()),
+        ("rating", pa.int8()),
+        ("title", pa.string()),
+        ("text", pa.string()),
+        ("timestamp", pa.timestamp("ms")),
+        ("helpful_vote", pa.int32()),
+        ("verified_purchase", pa.bool_()),
+        ("n_images", pa.int16()),
+        ("year", pa.int16()),  # partition column: stored in the path, not the file
+    ]
+)
 
 
 def transform_reviews(df: pd.DataFrame) -> pd.DataFrame:
@@ -99,6 +115,8 @@ def transform_meta(df: pd.DataFrame) -> pd.DataFrame:
 
 
 SPECS: dict[Kind, DatasetSpec] = {
-    "reviews": DatasetSpec(transform=transform_reviews, partition_cols=["year"]),
+    "reviews": DatasetSpec(
+        transform=transform_reviews, partition_cols=["year"], schema=REVIEWS_SCHEMA
+    ),
     "meta": DatasetSpec(transform=transform_meta, partition_cols=[], schema=META_SCHEMA),
 }
