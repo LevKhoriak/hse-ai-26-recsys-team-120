@@ -3473,6 +3473,7 @@ dependencies = [
     { name = "s3fs" },
     { name = "scipy" },
     { name = "tqdm" },
+    { name = "urllib3" },
 ]
 
 [package.optional-dependencies]
@@ -3512,6 +3513,7 @@ requires-dist = [
     { name = "scipy", specifier = ">=1.18.1" },
     { name = "torch", marker = "extra == 'train'", specifier = ">=2.14.1" },
     { name = "tqdm", specifier = ">=4.70.1" },
+    { name = "urllib3", specifier = ">=2.8.0" },
 ]
 provides-extras = ["train"]
 
