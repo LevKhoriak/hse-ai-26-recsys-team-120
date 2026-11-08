@@ -154,6 +154,8 @@ def test_image_urls_prefers_hi_res_and_drops_placeholders() -> None:
         {"parent_asin": "p1", "variant": "MAIN", "url": "https://x/hi.jpg"},
         {"parent_asin": "p1", "variant": "PT01", "url": "https://x/l2.jpg"},
     ]
+    large = load.image_urls(meta, size="large")
+    assert large["url"].tolist() == ["https://x/l.jpg", "https://x/l2.jpg"]
 
 
 class FakeHttp:
