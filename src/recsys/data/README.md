@@ -34,23 +34,56 @@ dataset_uri("reviews", "Amazon_Fashion")
 
 ## Доступ
 
-1. Положите в `.env` в корне репозитория свои ключи:
+Ключи S3 можно положить в одно из двух мест, boto3 и s3fs найдут их сами:
 
-   ```bash
-   AWS_ACCESS_KEY_ID=...
-   AWS_SECRET_ACCESS_KEY=...
-   ```
+- `~/.aws/credentials` (профиль `[default]`) — удобно, если ключи нужны не только в этом репозитории;
+- `.env` в корне репозитория.
 
-   Эндпоинт, регион и бакет общие и уже прописаны в `src/recsys/settings.py`.
+Имена переменных должны быть именно такими, другие имена (например `S3_BUCKET_ACCESS_KEY`) код не читает:
 
-2. В ноутбуке загрузите `.env` первой ячейкой:
+```bash
+AWS_ACCESS_KEY_ID=...
+AWS_SECRET_ACCESS_KEY=...
+```
 
-   ```python
-   %load_ext dotenv
-   %dotenv
-   ```
+Эндпоинт, регион и бакет общие и уже прописаны в `src/recsys/settings.py`.
+
+Если ключи в `.env`, в ноутбуке загрузите его первой ячейкой:
+
+```python
+%load_ext dotenv
+%dotenv
+```
+
+Если на macOS чтение падает с `RecursionError` в `ssl`, вызовите `truststore.inject_into_ssl()` до импорта s3fs и boto3.
 
 ## Чтение
+
+### recsys.data.load
+
+Самый короткий путь, с чисткой отзывов и локальным кешем:
+
+```python
+from recsys.data.load import fetch_images, image_urls, read_meta, read_reviews
+
+reviews = read_reviews(
+    "Amazon_Fashion",
+    columns=["user_id", "parent_asin", "timestamp"],
+    years=range(2018, 2024),
+)
+meta = read_meta("Amazon_Fashion", columns=["parent_asin", "title", "images"])
+
+urls = image_urls(meta)  # parent_asin, variant (MAIN, PT01, ...), url
+images = fetch_images(urls.loc[urls["variant"] == "MAIN", "url"].head(1000))
+# {url: bytes или None, если картинку скачать не удалось}
+```
+
+- `read_reviews` по умолчанию чистит отзывы: убирает оценки вне 1–5, отрицательные `helpful_vote` и точные повторы одного отзыва (`DEDUP_KEY`). `clean=False` отдаёт данные как есть. Отзывы каждый раз читаются из S3, поэтому берите только нужные колонки и годы.
+- `read_meta` при первом вызове скачивает метаданные категории в `data/cache/meta/` (около 300 МБ у Fashion), дальше читает с диска. После пересборки датасета ETL вызовите с `refresh=True`.
+- `image_urls` берёт `hi_res`, если есть, иначе `large`, и выкидывает заглушку Amazon «нет картинки».
+- `fetch_image` / `fetch_images` кешируют картинки в `data/cache/images/`, повторяют запрос при таймаутах и 5xx. Открыть: `PIL.Image.open(io.BytesIO(data))`.
+
+Папка кеша задаётся `CACHE_DIR` в `.env` или окружении, по умолчанию `data/cache/` в корне репозитория (она в `.gitignore`).
 
 ### pandas
 
