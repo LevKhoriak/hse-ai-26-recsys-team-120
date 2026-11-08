@@ -5,12 +5,14 @@ import shutil
 import urllib.error
 from email.message import Message
 from pathlib import Path
+from types import SimpleNamespace
 
 import pandas as pd
 import pyarrow as pa
 import pyarrow.dataset as ds
 import pyarrow.parquet as pq
 import pytest
+import urllib3
 
 from recsys.data import load, s3
 from recsys.settings import get_settings
@@ -201,3 +203,28 @@ def test_fetch_images_maps_failures_to_none() -> None:
     assert result == {"https://x/a.jpg": None}
     ok = load.fetch_images(["https://x/b.jpg", "https://x/b.jpg"], fetch=http)
     assert ok == {"https://x/b.jpg": b"bytes of https://x/b.jpg"}
+
+
+class FakePool:
+    def __init__(self, status: int = 200, error: Exception | None = None) -> None:
+        self.status, self.error = status, error
+
+    def request(self, method: str, url: str) -> SimpleNamespace:
+        if self.error:
+            raise self.error
+        return SimpleNamespace(status=self.status, reason="x", data=b"img")
+
+
+def test_http_get_maps_errors_to_urllib(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(load, "_pool", lambda: FakePool())
+    assert load._http_get("https://x/a.jpg") == b"img"
+
+    monkeypatch.setattr(load, "_pool", lambda: FakePool(status=404))
+    with pytest.raises(urllib.error.HTTPError) as error:
+        load._http_get("https://x/a.jpg")
+    assert error.value.code == 404
+
+    timeout = urllib3.exceptions.ReadTimeoutError(None, "https://x", "slow")  # type: ignore[arg-type]
+    monkeypatch.setattr(load, "_pool", lambda: FakePool(error=timeout))
+    with pytest.raises(urllib.error.URLError):  # retried by fetch_image
+        load._http_get("https://x/a.jpg")

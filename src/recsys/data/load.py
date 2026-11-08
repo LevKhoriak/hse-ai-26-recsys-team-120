@@ -21,14 +21,16 @@ import json
 import shutil
 import time
 import urllib.error
-import urllib.request
 from collections.abc import Callable, Iterable, Sequence
 from concurrent.futures import ThreadPoolExecutor
+from email.message import Message
+from functools import cache
 from pathlib import Path
 from typing import Any, Literal
 
 import pandas as pd
 import pyarrow.dataset as ds
+import urllib3
 
 from recsys.data import s3
 from recsys.data.paths import dataset_uri
@@ -162,10 +164,28 @@ def image_urls(meta: pd.DataFrame, size: ImageSize = "hi_res") -> pd.DataFrame:
     return pd.DataFrame(rows, columns=["parent_asin", "variant", "url"])
 
 
+@cache
+def _pool() -> urllib3.PoolManager:
+    # one pool shared by all threads, so connections are reused: a new TLS
+    # handshake per image is ~10x slower, especially with truststore on macOS
+    return urllib3.PoolManager(
+        maxsize=64,
+        headers={"User-Agent": "recsys-eda/0.1"},
+        timeout=urllib3.Timeout(total=30),
+        retries=False,  # fetch_image retries itself
+    )
+
+
 def _http_get(url: str) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": "recsys-eda/0.1"})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return bytes(response.read())
+    """GET with errors as urllib's: HTTPError for 4xx/5xx, URLError otherwise."""
+    try:
+        response = _pool().request("GET", url)
+    except urllib3.exceptions.HTTPError as e:  # timeouts, refused connections
+        raise urllib.error.URLError(e) from e
+    if response.status >= 400:
+        reason = response.reason or ""
+        raise urllib.error.HTTPError(url, response.status, reason, Message(), None)
+    return response.data
 
 
 def _image_path(url: str) -> Path:
