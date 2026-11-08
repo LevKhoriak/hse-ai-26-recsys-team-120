@@ -79,6 +79,16 @@ def rm(path: str, recursive: bool = False) -> None:
     _fs().rm(path, recursive=recursive)
 
 
+def get(src: str, dst: str) -> None:
+    """Download a folder (recursively) or a single object to a local path."""
+    _fs().get(src, dst, recursive=True)
+
+
+def filesystem() -> s3fs.S3FileSystem:
+    """The shared filesystem object, for libraries that take one (pyarrow)."""
+    return _fs()
+
+
 # --- paths and cleanup ------------------------------------------------------
 
 

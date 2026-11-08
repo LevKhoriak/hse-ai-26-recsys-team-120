@@ -1,0 +1,9 @@
+,,,товаров,меток,чистота@10,случайно,во сколько раз
+Amazon_Fashion,image,тип,8253.0,14.0,0.787,0.112,7.1
+Amazon_Fashion,image,магазин,2033.0,202.0,0.181,0.008,21.7
+Amazon_Fashion,text,тип,8253.0,14.0,0.85,0.112,7.6
+Amazon_Fashion,text,магазин,2033.0,202.0,0.358,0.008,42.9
+Grocery_and_Gourmet_Food,image,тип,8774.0,16.0,0.571,0.241,2.4
+Grocery_and_Gourmet_Food,image,магазин,1954.0,203.0,0.331,0.01,32.6
+Grocery_and_Gourmet_Food,text,тип,8774.0,16.0,0.728,0.241,3.0
+Grocery_and_Gourmet_Food,text,магазин,1954.0,203.0,0.471,0.01,46.3
