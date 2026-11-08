@@ -25,7 +25,7 @@ import urllib.request
 from collections.abc import Callable, Iterable, Sequence
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 import pandas as pd
 import pyarrow.dataset as ds
@@ -43,6 +43,7 @@ DEDUP_KEY = ["user_id", "parent_asin", "asin", "timestamp", "rating"]
 _CLEAN_COLS = ["rating", "helpful_vote"]
 
 Fetcher = Callable[[str], bytes]
+ImageSize = Literal["hi_res", "large"]
 
 
 # --- reviews -----------------------------------------------------------------
@@ -141,17 +142,20 @@ def _parse_images(value: Any) -> list[dict[str, Any]]:
     return parsed if isinstance(parsed, list) else []
 
 
-def image_urls(meta: pd.DataFrame) -> pd.DataFrame:
+def image_urls(meta: pd.DataFrame, size: ImageSize = "hi_res") -> pd.DataFrame:
     """One row per (item, image): `parent_asin`, `variant` (MAIN, PT01, ...), `url`.
 
-    Takes `hi_res` when the item has it, `large` otherwise. Images without a URL
+    `size="hi_res"` takes the ~1500 px picture when the item has it, `large`
+    otherwise. `size="large"` takes the ~500 px one (5-6x smaller files), which
+    is enough for models that resize to 224 px, like CLIP. Images without a URL
     and Amazon's placeholder picture are left out, so items without real images
     don't appear at all. Needs the `parent_asin` and `images` columns.
     """
+    keys = ("hi_res", "large") if size == "hi_res" else ("large",)
     rows = []
     for asin, value in zip(meta["parent_asin"], meta["images"], strict=True):
         for image in _parse_images(value):
-            url = image.get("hi_res") or image.get("large")
+            url = next((image[k] for k in keys if image.get(k)), None)
             if not url or PLACEHOLDER in url:
                 continue
             rows.append((asin, image.get("variant"), url))
