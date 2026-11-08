@@ -1,0 +1,9 @@
+user_bucket,юзеров в test,% юзеров,пар в test,% пар,category,cutoff
+0,165269,85.7,174949,84.3,Amazon_Fashion,2022-01-01
+1,18746,9.7,20690,10.0,Amazon_Fashion,2022-01-01
+2-4,7354,3.8,8701,4.2,Amazon_Fashion,2022-01-01
+5+,1588,0.8,3293,1.6,Amazon_Fashion,2022-01-01
+0,1248737,66.2,1645195,57.2,Grocery_and_Gourmet_Food,2022-01-01
+1,278432,14.8,409177,14.2,Grocery_and_Gourmet_Food,2022-01-01
+2-4,232083,12.3,408979,14.2,Grocery_and_Gourmet_Food,2022-01-01
+5+,126089,6.7,414723,14.4,Grocery_and_Gourmet_Food,2022-01-01
