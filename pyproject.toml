@@ -27,6 +27,7 @@ dependencies = [
 
 [project.optional-dependencies]
 train = [
+    "open-clip-torch>=4.2.1",
     "scikit-learn>=1.9.1",
     "torch>=2.14.1",
 ]
@@ -46,6 +47,7 @@ dev = [
     "truststore>=0.10.5",
     "types-boto3[s3]>=1.43.114",
     "types-tqdm>=4.70.0.20260906",
+    "umap-learn>=0.5.12",
 ]
 
 [tool.ruff.lint]
