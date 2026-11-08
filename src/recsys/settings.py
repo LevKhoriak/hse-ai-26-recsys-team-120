@@ -9,8 +9,12 @@ AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY from the environment themselves.
 """
 
 from functools import cache
+from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+# repo root: src/recsys/settings.py -> parents[2]
+_ROOT = Path(__file__).resolve().parents[2]
 
 
 class Settings(BaseSettings):
@@ -21,6 +25,9 @@ class Settings(BaseSettings):
     aws_endpoint_url: str = "https://s3.ru-7.storage.selcloud.ru"
     aws_region: str = "ru-7"
     s3_bucket_name: str = "hse-recsys-project"
+    # local copies of item metadata and images (recsys.data.load); /data/ is
+    # git-ignored. Absolute, so notebooks and scripts share one cache
+    cache_dir: Path = _ROOT / "data" / "cache"
 
 
 @cache
