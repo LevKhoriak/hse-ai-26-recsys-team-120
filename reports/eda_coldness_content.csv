@@ -1,4 +1,4 @@
-item_bucket,title,description,features,текст кроме title,картинка,category,cutoff
+item_bucket,has_title,has_description,has_features,has_extra_text,has_image,category,cutoff
 0,100.0,9.1,68.6,69.4,97.4,Amazon_Fashion,2022-01-01
 1,100.0,6.7,51.8,52.7,98.4,Amazon_Fashion,2022-01-01
 2-4,100.0,6.6,57.4,58.0,98.9,Amazon_Fashion,2022-01-01
