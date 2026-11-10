@@ -27,6 +27,7 @@ dependencies = [
 
 [project.optional-dependencies]
 train = [
+    "open-clip-torch>=4.2.1",
     "scikit-learn>=1.9.1",
     "torch>=2.14.1",
 ]
@@ -41,10 +42,14 @@ dev = [
     "pandas-stubs>=3.1.0.261029",
     "pre-commit>=4.7.0",
     "pyarrow-stubs>=20.0.0.20260819",
+    "pyrefly>=1.4.1",
     "pytest>=9.1.1",
     "ruff>=0.17.0",
+    "scipy-stubs>=1.18.1.1",
+    "truststore>=0.10.5",
     "types-boto3[s3]>=1.43.114",
     "types-tqdm>=4.70.0.20260906",
+    "umap-learn>=0.5.12",
 ]
 
 [tool.ruff.lint]

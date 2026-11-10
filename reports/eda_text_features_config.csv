@@ -1,0 +1,44 @@
+parameter,value
+category,Grocery_and_Gourmet_Food
+source_url,https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023/resolve/2b6d039ed471f2ba5fd2acb718bf33b0a7e5598e/raw/meta_categories/meta_Grocery_and_Gourmet_Food.jsonl
+source_revision,2b6d039ed471f2ba5fd2acb718bf33b0a7e5598e
+source_sha256,ed9b24ea707f7010b5cb321462a8e896ad1fcd59620fbc55f05084c3da59842e
+source_bytes,1382105675
+prepared_at_utc,2026-11-09T00:00:33.055291+00:00
+sample_size,2000
+seed,42
+selection,reservoir over unique items with nonempty title and list features; first eligible record per ID
+label,categories[1]; missing labels excluded from purity denominators
+sample_ids_sha256,3bac90724ba8c054d3bd5160af22369cd9f3c77022703b53433b54f6ac66b880
+sample_parquet_sha256,e8acef4084058003fb3648b14347ff55142692d83f872a76b80dcef46114c48a
+preparation_script_sha256,b8f8818e1c5a7ed3fbe36c03b24eb5de915146244b65da161fb5b7f8a34c3403
+team_s3_comparison,not performed
+model_repository,laion/CLIP-ViT-B-32-laion2B-s34B-b79K
+model_revision,1a25a446712ba5ee05982a381eed697ef9b435cf
+model,ViT-B-32
+pretrained,laion2b_s34b_b79k
+device,cpu
+weight_sha256,"[""ac4f8c4b88af6d963118cbf40ad93176d092abbedfcb752601ae1866352656e6""]"
+k,10
+context_length,77
+text_separator_json,""" | """
+similarity,"cosine, L2 normalized, no centering"
+self_match,excluded
+tie_break,parent_asin ascending
+python,3.13.3
+version_open-clip-torch,4.2.1
+version_torch,2.15.0
+version_torchvision,0.29.2
+version_numpy,2.5.4
+version_pandas,3.1.1
+version_pyarrow,26.0.1
+version_matplotlib,3.11.2
+version_nbformat,5.11.1
+version_nbclient,0.11.0
+version_nbconvert,7.17.2
+version_requests,2.34.2
+version_huggingface-hub,2.4.0
+example_queries,30
+example_pairs,126
+codex_reviewed_pairs,23
+human_reviewed_pairs,0

@@ -1,0 +1,11 @@
+item_bucket,has_title,has_description,has_features,has_extra_text,has_image,category,cutoff
+0,100.0,9.1,68.6,69.4,97.4,Amazon_Fashion,2022-01-01
+1,100.0,6.7,51.8,52.7,98.4,Amazon_Fashion,2022-01-01
+2-4,100.0,6.6,57.4,58.0,98.9,Amazon_Fashion,2022-01-01
+5-19,100.0,8.5,62.6,63.2,99.4,Amazon_Fashion,2022-01-01
+20+,100.0,15.6,67.4,68.3,99.5,Amazon_Fashion,2022-01-01
+0,100.0,58.0,79.4,84.9,99.7,Grocery_and_Gourmet_Food,2022-01-01
+1,100.0,60.5,63.8,71.7,99.3,Grocery_and_Gourmet_Food,2022-01-01
+2-4,100.0,62.0,67.8,74.7,99.7,Grocery_and_Gourmet_Food,2022-01-01
+5-19,100.0,64.8,74.6,80.2,99.9,Grocery_and_Gourmet_Food,2022-01-01
+20+,100.0,68.7,85.0,88.8,99.9,Grocery_and_Gourmet_Food,2022-01-01

@@ -1,0 +1,587 @@
+section,metric,group,value,n,category
+source,duplicate_eligible_id,all,0.0,603274,Grocery_and_Gourmet_Food
+source,eligible_unique,all,435823.0,603274,Grocery_and_Gourmet_Food
+source,features_non_list,all,0.0,603274,Grocery_and_Gourmet_Food
+source,invalid_json,all,0.0,603274,Grocery_and_Gourmet_Food
+source,invalid_record,all,0.0,603274,Grocery_and_Gourmet_Food
+source,missing_features,all,167413.0,603274,Grocery_and_Gourmet_Food
+source,missing_id,all,0.0,603274,Grocery_and_Gourmet_Food
+source,missing_title,all,38.0,603274,Grocery_and_Gourmet_Food
+source,source_rows,all,603274.0,603274,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,missing,12840.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,missing,47.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,$3 Off Select Candy,43.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,$3 Off Select Candy,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,+10% Off - All Groceries,12.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,+10% Off - All Groceries,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,1,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,1,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,15% Off Select Gum (Prices as Marked),2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,15% Off Select Gum (Prices as Marked),0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,15% off Grocery items,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,15% off Grocery items,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,20% Off Pantry Favorites,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,20% Off Pantry Favorites,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,20% off Back to School,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,20% off Back to School,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,2023 annual trends,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,2023 annual trends,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,25% Off Kraft Products,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,25% Off Kraft Products,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,25% Off Planters & Select Kraft Sauces and Marinades with Instant Coupon,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,25% Off Planters & Select Kraft Sauces and Marinades with Instant Coupon,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,5 ingredient pasta fix - pasta,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,5 ingredient pasta fix - pasta,1.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,A Taste of Summer,5.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,A Taste of Summer,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,APS Test,38.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,APS Test,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Alcoholic Beverages,1087.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Alcoholic Beverages,5.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Amazon Student Exclusive - 20% Off Groceries,136.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Amazon Student Exclusive - 20% Off Groceries,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Art of Appreciation Holiday Gift Baskets,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Art of Appreciation Holiday Gift Baskets,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Asian,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Asian,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,August Special Events,38.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,August Special Events,2.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Baby Pouches,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Baby Pouches,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Back to Business Food & Beverages,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Back to Business Food & Beverages,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"Baking Chocolate, Syrups & Toppings",1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"Baking Chocolate, Syrups & Toppings",0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Baking Extracts & Flavoring,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Baking Extracts & Flavoring,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Baking essentials,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Baking essentials,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Bars,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Bars,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"Beer, Wine, & Spirits",3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"Beer, Wine, & Spirits",0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Beverages,75558.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Beverages,374.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Birds Eye,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Birds Eye,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Boar's Head,7.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Boar's Head,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Brackets and Basketball,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Brackets and Basketball,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Bread,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Bread,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Breads & Bakery,20817.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Breads & Bakery,95.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Breads & bakery,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Breads & bakery,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Breakfast,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Breakfast,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Breakfast Bakery,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Breakfast Bakery,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Breakfast Cereal,2651.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Breakfast Cereal,11.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Breakfast Deals,22.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Breakfast Deals,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Breakfast Foods,5304.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Breakfast Foods,33.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Breakfast baked goods,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Breakfast baked goods,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Breakfast bars,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Breakfast bars,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Breakfast goods,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Breakfast goods,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Build the perfect taco,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Build the perfect taco,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Build-a-sandwich,32.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Build-a-sandwich,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"Buy One Lipton, Get One 50% Off",1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"Buy One Lipton, Get One 50% Off",0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,CA: Seasonings,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,CA: Seasonings,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,CO: Bakery,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,CO: Bakery,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,CO: Sweets,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,CO: Sweets,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Candy,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Candy,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Candy & Chocolate,480.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Candy & Chocolate,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Canned & Packaged Goods,11.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Canned & Packaged Goods,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Canned Tuna & Seafood,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Canned Tuna & Seafood,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Canned soups,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Canned soups,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"Canned, Packaged & Baking",2651.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"Canned, Packaged & Baking",11.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Caviar PMD,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Caviar PMD,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Certified Gluten Free,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Certified Gluten Free,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Certified Kosher KOF-A,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Certified Kosher KOF-A,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Certified USDA Test,9.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Certified USDA Test,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Chardonnay,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Chardonnay,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Cheese,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Cheese,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Chili & chowders,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Chili & chowders,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Chips,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Chips,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Chips & Crisps Sample Credit Test,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Chips & Crisps Sample Credit Test,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Chobani,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Chobani,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Coffee,17.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Coffee,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Community Coffee Free Sample,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Community Coffee Free Sample,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Community Coffee Holiday,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Community Coffee Holiday,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Condiments & sauces,29.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Condiments & sauces,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Cookies,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Cookies,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Cooking & Baking,31.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Cooking & Baking,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Crackers & crisps,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Crackers & crisps,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Cranberry,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Cranberry,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Crystal Light Sampling,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Crystal Light Sampling,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Dairy aisle,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Dairy aisle,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"Dairy, Eggs & Plant-Based Alternatives",9718.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"Dairy, Eggs & Plant-Based Alternatives",47.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Deli & Prepared Foods,6483.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Deli & Prepared Foods,27.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Dips and spreads,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Dips and spreads,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Dried Fruit Promo Credit,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Dried Fruit Promo Credit,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Drinks,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Drinks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Easter 2015,6.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Easter 2015,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Easter Candy & Chocolate,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Easter Candy & Chocolate,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Easy meals (IA),2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Easy meals (IA),0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Edible Toys,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Edible Toys,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Energy Drinks Sample Box Rebate,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Energy Drinks Sample Box Rebate,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Entrees,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Entrees,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"FREE Sample: Nature Valley Bistro Cups Oatmeal, Apple Cinnamon Almond",1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"FREE Sample: Nature Valley Bistro Cups Oatmeal, Apple Cinnamon Almond",0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,FREE Sample: PowerBar Protein Plus Peanut Butter Cookie,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,FREE Sample: PowerBar Protein Plus Peanut Butter Cookie,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Fall Favorites,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Fall Favorites,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Fats and oils,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Fats and oils,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Favorite foods at just-right prices,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Favorite foods at just-right prices,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Ferrero,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Ferrero,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Festive Grocery,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Festive Grocery,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Food & Beverage Gifts,9702.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Food & Beverage Gifts,52.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Food Should Taste Good Multigrain Tortilla Free Sampling,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Food Should Taste Good Multigrain Tortilla Free Sampling,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Foodie Stocking Stuffers,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Foodie Stocking Stuffers,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Fresh,29.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Fresh,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Fresh Flowers & Live Indoor Plants,3580.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Fresh Flowers & Live Indoor Plants,23.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Fresh Meal Kits,332.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Fresh Meal Kits,4.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Fresh baked,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Fresh baked,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Frito Favorites,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Frito Favorites,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Frito-Lay Snacks,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Frito-Lay Snacks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Frozen,8360.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Frozen,37.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Frozen Farm Stand,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Frozen Farm Stand,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Frozen Pizza,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Frozen Pizza,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Frozen desserts,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Frozen desserts,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Frozen dinners,5.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Frozen dinners,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Fruit Snacks,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Fruit Snacks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Fruity Candy,14.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Fruity Candy,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Frustration-Free Groceries,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Frustration-Free Groceries,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Frustration-Free Packaging: Grocery & Gourmet Food - US,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Frustration-Free Packaging: Grocery & Gourmet Food - US,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Fun Size Candy,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Fun Size Candy,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Game Day Snacks,49.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Game Day Snacks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Game Day Snacks & More,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Game Day Snacks & More,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Get ready for the big game,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Get ready for the big game,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Ghirardelli Holiday Gift Baskets,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Ghirardelli Holiday Gift Baskets,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Gifts Up To 40% Off,9.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Gifts Up To 40% Off,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Gluten Free,6.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Gluten Free,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Gluten Free: Baking,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Gluten Free: Baking,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Gluten free flavors,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Gluten free flavors,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"Gluten free sauces, condiments & seasonings",1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"Gluten free sauces, condiments & seasonings",0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Gluten-Free Groceries,454.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Gluten-Free Groceries,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Go adventure snacks,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Go adventure snacks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Gourmet Foods,25.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Gourmet Foods,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Gourmet Holiday Guide,80.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Gourmet Holiday Guide,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grilling season made greener: grilling veggies and plant proteins,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grilling season made greener: grilling veggies and plant proteins,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery & Gourmet Food Made in Italy,13.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery & Gourmet Food Made in Italy,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Easter,17.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Easter,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Fall Celebration Event,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Fall Celebration Event,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Fall Outlet,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Fall Outlet,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Halloween 2017,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Halloween 2017,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Markdowns,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Markdowns,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery New Items,16.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery New Items,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Oatmeal Favorites,145.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Oatmeal Favorites,1.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Outlet,7.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Outlet,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Prime Day 2017,613.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Prime Day 2017,3.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Subscribe & Save,11.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Subscribe & Save,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Subscribe & Save Event,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Subscribe & Save Event,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Grocery Subscribe and Save Event 2017,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Grocery Subscribe and Save Event 2017,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Haldiram's Gourmet Snacks & Sweets,9.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Haldiram's Gourmet Snacks & Sweets,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Happy Belly,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Happy Belly,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Hearth & artisan breads,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Hearth & artisan breads,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Hershey's Kisses,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Hershey's Kisses,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Holiday Baking,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Holiday Baking,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Holiday Entrees,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Holiday Entrees,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Holiday Marketplace Gifts,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Holiday Marketplace Gifts,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Holiday Themed Candy,5.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Holiday Themed Candy,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Home Brewing & Winemaking,1293.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Home Brewing & Winemaking,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Honey,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Honey,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Ice Cream by Unilever,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Ice Cream by Unilever,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Indian,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Indian,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,International Food Market,612.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,International Food Market,3.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,JELL-O: Fun For The Entire Family,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,JELL-O: Fun For The Entire Family,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Jams & spreads,10.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Jams & spreads,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Jerky & Dried Meats Sample Credit,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Jerky & Dried Meats Sample Credit,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Jerky Box Rebate,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Jerky Box Rebate,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Just Organik,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Just Organik,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,KIND Sample,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,KIND Sample,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Kellogg's Free Sample,7.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Kellogg's Free Sample,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Keto-friendly favorites,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Keto-friendly favorites,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Kosher,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Kosher,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Kosher supplements,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Kosher supplements,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Kosher sweets,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Kosher sweets,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Kraft Summer BBQ,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Kraft Summer BBQ,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"Larabar, Larabar Renola & Larabar Uber",37.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"Larabar, Larabar Renola & Larabar Uber",0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Lindt Easter Candy,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Lindt Easter Candy,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Lindt Master Swiss Chocolatier,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Lindt Master Swiss Chocolatier,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Liquids,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Liquids,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"Local Dairy, Cheese & Eggs",8.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"Local Dairy, Cheese & Eggs",0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Lunch,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Lunch,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,MA: Dairy and eggs,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,MA: Dairy and eggs,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,MA: Pantry,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,MA: Pantry,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Manager's Special,10.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Manager's Special,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Mango snacks,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Mango snacks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Mars,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Mars,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Mars Pantry,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Mars Pantry,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Meals,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Meals,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Meat & Seafood,7869.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Meat & Seafood,24.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Meat & Seafood for the grill,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Meat & Seafood for the grill,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Meat Substitutes,553.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Meat Substitutes,6.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Mother's Day in Grocery,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Mother's Day in Grocery,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Mustard,5.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Mustard,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,NC: Beverages,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,NC: Beverages,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Naturevibe Botanicals Store,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Naturevibe Botanicals Store,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Nestle,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Nestle,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,New Arrivals,76.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,New Arrivals,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,New Year New You - Healthy Eating,10.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,New Year New You - Healthy Eating,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,New Year New You 2016,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,New Year New You 2016,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Non-GMO,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Non-GMO,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Oils,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Oils,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Oreo in Pantry,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Oreo in Pantry,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Organic,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Organic,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Organic Groceries,171.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Organic Groceries,2.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Paleo-friendly foods,14.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Paleo-friendly foods,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Paleo-friendly snacks,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Paleo-friendly snacks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Pantry,15.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Pantry,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Pantry Cross Selection,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Pantry Cross Selection,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Pantry Staples,165435.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Pantry Staples,751.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Pantry staples,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Pantry staples,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Plant-Based Lifestyles,344.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Plant-Based Lifestyles,2.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Potatoes and root vegetables,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Potatoes and root vegetables,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Premium Juice,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Premium Juice,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Prepared Entrees,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Prepared Entrees,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Prime Members save 35% at checkout,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Prime Members save 35% at checkout,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Prime foods at just-right prices,5.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Prime foods at just-right prices,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Pringles Sampling,9.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Pringles Sampling,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Produce,10197.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Produce,31.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Qualifying Items for Kraft Recipe Makers Sample,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Qualifying Items for Kraft Recipe Makers Sample,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Quench your thirst,14.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Quench your thirst,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Quick Meals & Snacks,9.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Quick Meals & Snacks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Quick school night dinners,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Quick school night dinners,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Rakhi & Sweets Combo,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Rakhi & Sweets Combo,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Ready Pac,8.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Ready Pac,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Restaurant and Bulk Food Supply,762.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Restaurant and Bulk Food Supply,3.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,SNAP EBT on Amazon,178.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,SNAP EBT on Amazon,1.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Safe & Healthy Customer Favorites,6.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Safe & Healthy Customer Favorites,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Salts,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Salts,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Salty snacks,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Salty snacks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Save Now on Jell-O & Baker's Chocolate,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Save Now on Jell-O & Baker's Chocolate,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Save on McCafe Coffee Select products,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Save on McCafe Coffee Select products,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Scharffen Berger Holiday,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Scharffen Berger Holiday,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Shop the season's juiciest fruit IA,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Shop the season's juiciest fruit IA,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Sides & ingredients,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Sides & ingredients,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Skittles & Starburst,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Skittles & Starburst,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Snack Foods Sample Box Promo Credit,21.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Snack Foods Sample Box Promo Credit,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Snack foods,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Snack foods,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Snacks,24.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Snacks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Snacks & Sweets,85464.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Snacks & Sweets,400.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Snacks & produce IA,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Snacks & produce IA,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Snacks & sweet treats,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Snacks & sweet treats,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Snap Kitchen & Urban Remedy,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Snap Kitchen & Urban Remedy,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Soda and cocktail mixers,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Soda and cocktail mixers,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Sparkling Soda Sample Box Credit,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Sparkling Soda Sample Box Credit,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Specialty Cheese,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Specialty Cheese,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Specialty Diets Storefront,296.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Specialty Diets Storefront,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Specialty Gifts,24.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Specialty Gifts,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Spices and seasonings,32.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Spices and seasonings,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Spring Savings,17.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Spring Savings,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Star Wars Grocery Store,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Star Wars Grocery Store,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Step 1. Pick your proteins,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Step 1. Pick your proteins,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Step 2. Add some veggies,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Step 2. Add some veggies,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Step 3. Build your base,5.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Step 3. Build your base,1.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Stock-Up on Your Favorite Frito-Lay Snacks,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Stock-Up on Your Favorite Frito-Lay Snacks,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Student Favorites in Grocery,15.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Student Favorites in Grocery,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Subscribe & Save on Buddy Fruits,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Subscribe & Save on Buddy Fruits,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Subscribe & Save up to 15% on Select Plum Organics Products,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Subscribe & Save up to 15% on Select Plum Organics Products,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Suddenly Salad Harvest Grain Free Sample,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Suddenly Salad Harvest Grain Free Sample,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Sugar conscious products,6.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Sugar conscious products,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Summer Entertaining,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Summer Entertaining,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Summer Treats,91.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Summer Treats,1.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Summertime Sliders with La Brea Bakery,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Summertime Sliders with La Brea Bakery,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Sweet Treats & Desserts,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Sweet Treats & Desserts,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,TEST ABCDEFGPD,14.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,TEST ABCDEFGPD,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,TX: Pickled & fermented,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,TX: Pickled & fermented,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Tea,28.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Tea,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Tea and Accessories,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Tea and Accessories,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Test01,42.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Test01,1.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Thanksgiving Appetizers,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Thanksgiving Appetizers,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Thanksgiving Sides,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Thanksgiving Sides,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Thanksgiving Turkey & Ham,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Thanksgiving Turkey & Ham,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Tortillas,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Tortillas,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Tyson Tastemakers Meal Kits,7.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Tyson Tastemakers Meal Kits,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Union Kitchen,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Union Kitchen,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,V8 Nutrition Bar Free Sample,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,V8 Nutrition Bar Free Sample,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Valentine's Day,25.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Valentine's Day,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Valentine's Day chocolate & candy gifts,15.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Valentine's Day chocolate & candy gifts,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Vegan baked goods,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Vegan baked goods,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"Vegan sauces, condiments & seasonings",1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"Vegan sauces, condiments & seasonings",0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Vegan-friendly foods,5.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Vegan-friendly foods,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Vegetarian favorites,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Vegetarian favorites,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Weeknight Meal Solutions,36.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Weeknight Meal Solutions,1.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Whole Foods Market - All things pumpkin,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Whole Foods Market - All things pumpkin,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Whole Foods Market - Build the best cheese board,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Whole Foods Market - Build the best cheese board,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Whole Foods Market - Classic holiday entrees,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Whole Foods Market - Classic holiday entrees,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,"Whole Foods Market - Easy, elegant appetizers",1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,"Whole Foods Market - Easy, elegant appetizers",0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Whole Foods Market - Organic,4.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Whole Foods Market - Organic,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Whole Foods Market - Pie fillings,2.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Whole Foods Market - Pie fillings,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Whole Foods Market - Pie toppings,173.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Whole Foods Market - Pie toppings,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Whole Foods Market - Save 25% on beauty & body care,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Whole Foods Market - Save 25% on beauty & body care,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Whole Foods Market - Save on Amazon Meal Kits,3.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Whole Foods Market - Save on Amazon Meal Kits,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Whole Foods Market - Seasonal Produce,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Whole Foods Market - Seasonal Produce,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Whole Foods Market - Sides that steal the spotlight,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Whole Foods Market - Sides that steal the spotlight,0.0,2000,Grocery_and_Gourmet_Food
+label_coverage,eligible_count,Wine Country Holiday,1.0,435823,Grocery_and_Gourmet_Food
+label_coverage,sample_count,Wine Country Holiday,0.0,2000,Grocery_and_Gourmet_Food
+sample,n_features_median,all,5.0,2000,Grocery_and_Gourmet_Food
+sample,title_words_median,all,11.0,2000,Grocery_and_Gourmet_Food
+sample,features_words_median,all,42.0,2000,Grocery_and_Gourmet_Food
+sample,title_tokens_median,all,18.0,2000,Grocery_and_Gourmet_Food
+sample,combined_tokens_median,all,76.0,2000,Grocery_and_Gourmet_Food
+sample,title_truncated_share,all,0.002,2000,Grocery_and_Gourmet_Food
+sample,combined_truncated_share,all,0.5015,2000,Grocery_and_Gourmet_Food
+sample,features_visible_tokens_median,all,40.0,2000,Grocery_and_Gourmet_Food
+sample,features_visible_share_mean,all,0.7204648060885149,2000,Grocery_and_Gourmet_Food
+sample,no_features_visible_share,all,0.0025,2000,Grocery_and_Gourmet_Food
+sample,feature_repeats_title_share,all,0.0185,2000,Grocery_and_Gourmet_Food
+sample,common_feature_10_items_share,all,0.087,2000,Grocery_and_Gourmet_Food
+sample,html_fragment_share,all,0.0025,2000,Grocery_and_Gourmet_Food
+sample,new_words_share_mean,all,0.8154503336745611,2000,Grocery_and_Gourmet_Food
+sample,missing_label_share,all,0.0235,2000,Grocery_and_Gourmet_Food
