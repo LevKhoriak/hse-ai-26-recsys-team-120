@@ -22,6 +22,7 @@ dependencies = [
     "s3fs[boto3]>=2025.1",
     "scipy>=1.18.1",
     "tqdm>=4.70.1",
+    "urllib3>=2.8.0",
 ]
 
 [project.optional-dependencies]

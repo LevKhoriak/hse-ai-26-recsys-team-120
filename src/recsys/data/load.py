@@ -21,14 +21,16 @@ import json
 import shutil
 import time
 import urllib.error
-import urllib.request
 from collections.abc import Callable, Iterable, Sequence
 from concurrent.futures import ThreadPoolExecutor
+from email.message import Message
+from functools import cache
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 import pandas as pd
 import pyarrow.dataset as ds
+import urllib3
 
 from recsys.data import s3
 from recsys.data.paths import dataset_uri
@@ -43,6 +45,7 @@ DEDUP_KEY = ["user_id", "parent_asin", "asin", "timestamp", "rating"]
 _CLEAN_COLS = ["rating", "helpful_vote"]
 
 Fetcher = Callable[[str], bytes]
+ImageSize = Literal["hi_res", "large"]
 
 
 # --- reviews -----------------------------------------------------------------
@@ -141,27 +144,48 @@ def _parse_images(value: Any) -> list[dict[str, Any]]:
     return parsed if isinstance(parsed, list) else []
 
 
-def image_urls(meta: pd.DataFrame) -> pd.DataFrame:
+def image_urls(meta: pd.DataFrame, size: ImageSize = "hi_res") -> pd.DataFrame:
     """One row per (item, image): `parent_asin`, `variant` (MAIN, PT01, ...), `url`.
 
-    Takes `hi_res` when the item has it, `large` otherwise. Images without a URL
+    `size="hi_res"` takes the ~1500 px picture when the item has it, `large`
+    otherwise. `size="large"` takes the ~500 px one (5-6x smaller files), which
+    is enough for models that resize to 224 px, like CLIP. Images without a URL
     and Amazon's placeholder picture are left out, so items without real images
     don't appear at all. Needs the `parent_asin` and `images` columns.
     """
+    keys = ("hi_res", "large") if size == "hi_res" else ("large",)
     rows = []
     for asin, value in zip(meta["parent_asin"], meta["images"], strict=True):
         for image in _parse_images(value):
-            url = image.get("hi_res") or image.get("large")
+            url = next((image[k] for k in keys if image.get(k)), None)
             if not url or PLACEHOLDER in url:
                 continue
             rows.append((asin, image.get("variant"), url))
     return pd.DataFrame(rows, columns=["parent_asin", "variant", "url"])
 
 
+@cache
+def _pool() -> urllib3.PoolManager:
+    # one pool shared by all threads, so connections are reused: a new TLS
+    # handshake per image is ~10x slower, especially with truststore on macOS
+    return urllib3.PoolManager(
+        maxsize=64,
+        headers={"User-Agent": "recsys-eda/0.1"},
+        timeout=urllib3.Timeout(total=30),
+        retries=False,  # fetch_image retries itself
+    )
+
+
 def _http_get(url: str) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": "recsys-eda/0.1"})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return bytes(response.read())
+    """GET with errors as urllib's: HTTPError for 4xx/5xx, URLError otherwise."""
+    try:
+        response = _pool().request("GET", url)
+    except urllib3.exceptions.HTTPError as e:  # timeouts, refused connections
+        raise urllib.error.URLError(e) from e
+    if response.status >= 400:
+        reason = response.reason or ""
+        raise urllib.error.HTTPError(url, response.status, reason, Message(), None)
+    return response.data
 
 
 def _image_path(url: str) -> Path:
